@@ -15,6 +15,10 @@ module VCAP::CloudController
         expect(job.job_name_in_configuration).to equal(:delete_action_job)
       end
 
+      it 'knows it has a git sha' do
+        expect(job.git_sha).to_not be_nil
+      end
+
       it 'calls the delete action' do
         job.perform
 

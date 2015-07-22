@@ -25,3 +25,5 @@ require 'jobs/timeout_job'
 require 'jobs/local_queue'
 require 'jobs/delete_action_job'
 require 'jobs/services/legacy_jobs/service_instance_deletion'
+require 'jobs/versioned_delayed_job'
+
