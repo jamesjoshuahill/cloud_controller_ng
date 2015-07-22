@@ -223,6 +223,14 @@ module VCAP::CloudController
           expect(last_response.status).to eq 200
         end
 
+        it 'creates a delayed job that has a version' do
+          #TODO: Fix this
+          post "/staging/droplets/#{app_obj.guid}/upload?async=true", upload_req
+          job = Delayed::Job.last
+          pp job.version
+          expect(job.version).to_not be_empty
+        end
+
         it "returns a JSON body with full url and basic auth to query for job's status" do
           post "/staging/droplets/#{app_obj.guid}/upload?async=true", upload_req
 

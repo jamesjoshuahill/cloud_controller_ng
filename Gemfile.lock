@@ -88,6 +88,7 @@ GEM
     delayed_job (4.0.4)
       activesupport (>= 3.0, < 4.2)
     diff-lcs (1.2.5)
+    digest (0.0.1)
     docile (1.1.5)
     em-http-request (1.1.2)
       addressable (>= 2.3.4)
@@ -347,6 +348,7 @@ DEPENDENCIES
   cloudfront-signer
   codeclimate-test-reporter
   delayed_job_sequel!
+  digest (~> 0.0.1)
   eventmachine (~> 1.0.0)
   fakefs
   fog
@@ -387,4 +389,4 @@ DEPENDENCIES
   yajl-ruby
 
 BUNDLED WITH
-   1.10.3
+   1.10.5
